@@ -1,5 +1,5 @@
 {pkgs ? import <nixpkgs> {}}: let
-  prettytable = pkgs.python310.pkgs.buildPythonPackage rec {
+  prettytable = pkgs.python3.pkgs.buildPythonPackage rec {
     pname = "prettytable";
     version = "0.7.2";
     format = "setuptools";
@@ -14,7 +14,7 @@
     };
   };
 
-  euclid3 = pkgs.python310.pkgs.buildPythonPackage rec {
+  euclid3 = pkgs.python3.pkgs.buildPythonPackage rec {
     pname = "euclid3";
     version = "0.01";
     format = "setuptools";
@@ -29,7 +29,7 @@
     };
   };
 
-  ply = pkgs.python310.pkgs.buildPythonPackage rec {
+  ply = pkgs.python3.pkgs.buildPythonPackage rec {
     pname = "ply";
     version = "3.11";
     src = pkgs.fetchurl {
@@ -44,7 +44,7 @@
     propagatedBuildInputs = [];
   };
 
-  pypng = pkgs.python310.pkgs.buildPythonPackage rec {
+  pypng = pkgs.python3.pkgs.buildPythonPackage rec {
     pname = "pypng";
     version = "0.0.19";
     format = "setuptools";
@@ -62,7 +62,7 @@
     };
   };
 
-  solidpython2 = pkgs.python310.pkgs.buildPythonPackage rec {
+  solidpython2 = pkgs.python3.pkgs.buildPythonPackage rec {
     pname = "solidpython2";
     version = "2.1.0a0";
     format = "wheel";
@@ -76,7 +76,7 @@
       euclid3
       ply
       pypng
-      pkgs.python310.pkgs.setuptools
+      pkgs.python3.pkgs.setuptools
     ];
     doCheck = false;
 
